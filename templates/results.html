@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <h2>YouTube Results</h2>
+    <ul>
+        {% for result in youtube_results %}
+        <li><a href="{{ result.url }}" target="_blank">{{ result.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <h2>Amazon Results</h2>
+    <ul>
+        {% for result in amazon_results %}
+        <li><a href="{{ result.url }}" target="_blank">{{ result.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to search</a>
+</body>
+</html>
